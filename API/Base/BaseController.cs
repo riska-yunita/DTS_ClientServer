@@ -23,7 +23,7 @@ namespace API.Controllers
             this.repository = repository;
         }
 
-        //Tambahkan try catch
+        
 
         [HttpGet]
         public async Task<ActionResult> Get()
