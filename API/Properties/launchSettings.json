@@ -1,0 +1,39 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:45294",
+      "sslPort": 44332
+    }
+  },
+  "profiles": {
+    "API": {
+      "JWTLoginAuthenticationAuthorization": {
+        "commandName": "Project",
+        "dotnetRunMessages": true,
+        "launchBrowser": true,
+        "launchUrl": "swagger",
+        "applicationUrl": "https://localhost:7144;http://localhost:5151",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  },
+  "Jwt": {
+    "Key": "9xFRJkBVDjGZrg6Tkieq", //Generate random String from https://www.random.org/strings
+    "Issuer": "http://localhost:45294", //App URL (We discussed above how we can get this URL)
+    "Audience": "http://localhost:45294"
+  }
+}
+http://localhost:45294
