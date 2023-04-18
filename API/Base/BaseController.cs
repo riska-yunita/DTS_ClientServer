@@ -23,8 +23,6 @@ namespace API.Controllers
             this.repository = repository;
         }
 
-        
-
         [HttpGet]
         public async Task<ActionResult> Get()
         {
@@ -156,6 +154,9 @@ namespace API.Controllers
         [HttpDelete("{key}")]
         public async Task<IActionResult> Delete(TKey key)
         {
+            if (!await _repository.IsExist(id)) {
+                return NotFound();
+            }
             await repository.DeleteAsync(key);
             
             return Ok(new
